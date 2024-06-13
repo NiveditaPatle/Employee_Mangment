@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.d-flex {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.flex-column {
+  flex-direction: column;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.container-fluid {
+  display: flex;
+  flex: 1;
+  padding: 0;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  margin: 0;
+}
+
+.sidebar {
+  padding: 30px;
+  /* height: 100%; */
+  padding-top: 56px; /* Adjust based on your header height */
+  border-right: 1px solid #ddd; /* Vertical line separator */
+  background-color: #f8f9fa; /* Light background color */
+  overflow-y: auto; /* Scrollable content if necessary */
+}
+
+main {
+  flex: 1;
+  padding-top: 56px; /* Adjust based on your header height */
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
   }
 }
+
+
+/* Sidebar.css */
+
+.nav-link {
+  /* padding: 10px 20px; */
+  color: #000;
+  /* padding: 35px 20px; */
+  /* margin-bottom: 80px; */
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.sidebar-item{
+  margin-bottom: 20px;
+}
+
+.sidebar-item:hover {
+  background-color: #f8f9fa; /* Light gray background on hover */
+}
+
+.nav-link {
+  color: #333; /* Dark text color */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Blue text color on hover */
+}
+
+
+/* EmployeeList.css */
+
+.employee-list {
+  padding: 20px;
+}
+
+.employee-list .form-control {
+  width: 300px; /* Adjust width as needed */
+}
+
+.custom-table {
+  margin-top: 20px;
+}
+
+.custom-table th,
+.custom-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.custom-table th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 10px;
+}
+
+.custom-table span {
+  margin-left: 5px;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+/* styles.css */
+.addEmployeeContainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.addEmployeeTitle {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  font-weight: bold;
+}
+
+.formControl {
+  border: 1px solid #ced4da; /* Example border style */
+  border-radius: 4px;
+  padding: 8px 10px;
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.submitButton {
+  margin-top: 10px;
+}
+
